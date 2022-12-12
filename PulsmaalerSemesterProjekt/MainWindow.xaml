@@ -1,0 +1,24 @@
+﻿<Window x:Class="PulsmaalerSemesterProjekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PulsmaalerSemesterProjekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="60,52,0,0" TextWrapping="Wrap" Text="Pulsmåler" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Grid.Column="2"/>
+        <Button x:Name="readyButton" Content="Ready" HorizontalAlignment="Left" Margin="301,169,0,0" VerticalAlignment="Top" Height="48" Width="60" Background="#FF8CFC13" Click="readyButton_Click" Grid.Column="2"/>
+        <Button x:Name="resetButton" Content="Reset" HorizontalAlignment="Left" Margin="301,261,0,0" VerticalAlignment="Top" Height="47" Width="60" Background="#FFF3DD18" Click="resetButton_Click" Grid.Column="2"/>
+        <ListBox x:Name="patientListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="8,176,4,25" SelectionChanged="patientListBox_SelectionChanged" Grid.Column="1"/>
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="301,348,0,0" VerticalAlignment="Top" Height="47" Width="60" Background="#FFE32929" Click="exitButton_Click" Grid.Column="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="8,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15" Width="248" Grid.Column="1"><Run Text="Name  "/><Run Text="&#x9;&#x9;"/><Run Language="da-dk" Text="  "/><Run Text="Puls "/><Run Text="&#x9;&#x9;"/><Run Text="Date"/></TextBlock>
+        <TextBox x:Name="patientTB" HorizontalAlignment="Left" Margin="12,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="23" TextChanged="patientTB_TextChanged" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,84,0,0" TextWrapping="Wrap" Text="Indtast patient navn:" VerticalAlignment="Top" Grid.Column="1"/>
+    </Grid>
+</Window>
